@@ -14,10 +14,11 @@ body{
 header {
   position: fixed;
   padding: 1.5rem;
-  z-index: 20;
+  z-index: 9990;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 .logobox{
   background: linear-gradient(#719549,#a9d86c);
@@ -75,12 +76,17 @@ header {
 ...............LAYOUT.................
 ----------------------------------- */
 section{
-  height: 100%;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
   background-color: white;
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 #landing{
   background-image: url(../imgs/sarah-dorweiler-123483-unsplash.jpg);
@@ -109,6 +115,7 @@ article{
   text-align: center;
   padding: 0 5%;
   z-index:2;
+
 }
 #email-link{
   width: 100%;
@@ -132,39 +139,31 @@ aside img{
   float: left;
 }
 .flex-container{
-  height: 40%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#works{
+canvas {
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index: -1;
+}
+#particles-js{
   z-index: 2;
   text-align: center;
-  background-color: #193c6d;
-  filter: progid: DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#003073', endColorstr='#029797');
-  background-image: url(//img.alicdn.com/tps/TB1d.u8MXXXXXXuXFXXXXXXXXXX-1900-790.jpg);
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, #003073), color-stop(100%, #029797));
-  background-image: -webkit-linear-gradient(135deg, #003073, #029797);
-  background-image: -moz-linear-gradient(45deg, #003073, #029797);
-  background-image: -ms-linear-gradient(45deg, #003073 0, #029797 100%);
-  background-image: -o-linear-gradient(45deg, #003073, #029797);
-  background-image: linear-gradient(135deg, #003073, #029797);
-  text-align: center;
-  margin: 0px;
-  overflow: hidden;
 }
-#works a{
+#particles-js a{
   display: inline-block;
   position: relative;
   font-size: 45px;
   font-weight: 400;
   transition: all .6s;
-  width: 100%;
   max-width: 300px;
-  height: 75%;
-
+  margin: 5%;
+  pointer-events: all;
 }
 button{
   width: 180px;
@@ -185,7 +184,6 @@ button:hover{
 figcaption{
   font-size: .7rem;
 }
-
 /* -----------------------------------
 .............TYPOGRAPHY...............
 ----------------------------------- */

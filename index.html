@@ -16,9 +16,7 @@
 
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-  <script src="js/script.js" type="text/javascript"></script>
-  <script src="js/fullpage.js" type="text/javascript" ></script>
+
 </head>
 
 <body>
@@ -54,7 +52,7 @@
     </section>
 
     <section class="section" id="about">
-      <img src="imgs/signature.png" alt="Signature">
+      <img data-src="imgs/signature.png" alt="Signature">
       <article>
         <h2>Hello again,</h2>
         <p>I’m a jack-of-all-trades designer with a degree in architecture, a focus in design thinking, and a passion for web design. I’m an empathetic thinker that puts the end user as the priority for all decisions.</p>
@@ -68,30 +66,28 @@
         <figcaption>Click to email!</figcaption>
       </figure>
       <aside>
-        <img src="imgs/address.png" alt="Address Icon"><p>56 Brighton Ave | Allston, MA 02134</p>
-        <img src="imgs/phone.png" alt="Phone Icon"><p>617.365.8818</p>
-        <img src="imgs/linkedin.png" alt="LinkedIn Icon"><p>/ acc2kr</p>
+        <img data-src="imgs/address.png" alt="Address Icon"><p>56 Brighton Ave | Allston, MA 02134</p>
+        <img data-src="imgs/phone.png" alt="Phone Icon"><p>617.365.8818</p>
+        <img data-src="imgs/linkedin.png" alt="LinkedIn Icon"><p>/ acc2kr</p>
       </aside>
       <button type="button" name="button" onclick="window.location.href = 'mailto:achen178@gmail.com';">
         SEND A MESSAGE
       </button>
     </section>
 
-    <section class="section" id="works">
-      <div class="flex-container">
-        <a href="https://www.acchen.com/project-1" class="project-link">
-          <img src="imgs/darren-coleshill-232714-unsplash.jpg" alt="Project1" id="project1-img">
+    <section class="section" id="particles-js">
+        <a href="https://www.acchen.com/project-1">
+          <img data-src="imgs/darren-coleshill-232714-unsplash.jpg" alt="Project1" id="project1-img">
           <span id="project1">RESUVA</span>
         </a>
-        <a href="https://www.acchen.com/project-3" class="project-link">
-          <img src="imgs/darren-coleshill-232714-unsplash.jpg" alt="Project2" id="project2-img">
+        <a href="https://www.acchen.com/project-3">
+          <img data-src="imgs/darren-coleshill-232714-unsplash.jpg" alt="Project2" id="project2-img">
           <span id="project2">PARIHUG</span>
         </a>
-        <a href="https://www.acchen.com/" class="project-link">
-          <img src="imgs/darren-coleshill-232714-unsplash.jpg" alt="Project3" id="project3-img">
+        <a href="https://www.acchen.com/">
+          <img data-src="imgs/darren-coleshill-232714-unsplash.jpg" alt="Project3" id="project3-img">
           <span id="project3">PORTFOLIO</span>
         </a>
-      </div>
     </section>
   </div>
   <footer>
@@ -100,6 +96,7 @@
     <p>&copy; Alex Chen 2018</p>
   </footer>
   <script type="text/javascript" src="js/fullpage.js"></script>
+  <script src="js/particles.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>

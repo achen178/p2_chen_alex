@@ -1,30 +1,20 @@
 var myFullpage = new fullpage('#fullpage', {
   //Navigation
-  menu: '#menu',
-  lockAnchors: false,
   anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
-  navigation: false,
-  navigationPosition: 'right',
-  navigationTooltips: ['firstSlide', 'secondSlide'],
   showActiveTooltip: false,
   slidesNavigation: false,
   slidesNavPosition: 'bottom',
+  css3: false,
 
   //Scrolling
-  css3: true,
-  scrollingSpeed: 1000,
-  autoScrolling: true,
+  scrollingSpeed: 700,
   fitToSection: true,
-  fitToSectionDelay: 1000,
+  fitToSectionDelay: 200,
   scrollBar: true,
   easing: 'easeInOutCubic',
   easingcss3: 'ease',
-  loopBottom: false,
-  loopTop: false,
-  loopHorizontal: false,
-  continuousVertical: false,
-  continuousHorizontal: false,
-  scrollHorizontally: false,
+  loopBottom: true,
+  loopTop: true,
   interlockedSlides: false,
   dragAndMove: false,
   offsetSections: false,
@@ -40,35 +30,30 @@ var myFullpage = new fullpage('#fullpage', {
 
   //Accessibility
   keyboardScrolling: true,
-  animateAnchor: true,
-  recordHistory: true,
 
   //Design
-  controlArrows: true,
-  verticalCentered: true,
-  sectionsColor : ['#ccc', '#fff'],
+  verticalCentered: false,
   paddingTop: '3em',
   paddingBottom: '10px',
   fixedElements: '#header, .footer',
   responsiveWidth: 0,
   responsiveHeight: 0,
   responsiveSlides: false,
-  parallax: false,
-  parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 
   //Custom selectors
-  sectionSelector: '.section',
-  slideSelector: '.slide',
   lazyLoading: true,
 
   //events
   onLeave: function(origin, destination, direction){},
   afterLoad: function(origin, destination, direction){},
-  afterRender: function(){},
   afterResize: function(width, height){},
   afterResponsive: function(isResponsive){},
   afterSlideLoad: function(section, origin, destination, direction){},
-  onSlideLeave: function(section, origin, destination, direction){}
+  onSlideLeave: function(section, origin, destination, direction){},
+
+  afterRender: function(){
+
+  }
 });
 
 // $(document).ready(function() {
@@ -119,4 +104,113 @@ $( document ).ready(function() {
       $( ".hamburger" ).show();
     });
   });
+});
+particlesJS('particles-js',
+{
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#282828"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#282828"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": .3,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 5,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#000000",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true,
 });
