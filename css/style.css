@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #282828;
+}
+
+/* -----------------------------------
+...............HEADER.................
+----------------------------------- */
+header {
+  height: 60px;
+  text-align: right;
+  position: fixed;
+  padding: 30px;
+  z-index: 20;
+}
+.logobox{
+  background: linear-gradient(#719549,#a9d86c);;
+  width: 50px;
+  height: 50px;
+  padding:10px;
+  opacity: .9;
+  position: fixed;
+  box-shadow: 3px 3px 10px #999999;
+}
+header img{
+  width: 40px;
+  left: -5px;
+  top: 5px;
+  opacity: 1;
+  display: inline-block;
+  position: relative;
+}
+nav{
+  position: fixed;
+  right: 40px;
+  top: 30px;
+}
+nav li{
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 12px;
+  font-weight: 600;
+}
+/* -----------------------------------
+...............LAYOUT.................
+----------------------------------- */
+section{
+  height: 110vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+#landing{
+  background-image: url(../imgs/sarah-dorweiler-123483-unsplash.jpg);
+  background-size: cover;
+  text-align: center;
+  z-index:2;
+}
+#about{
+  position: relative;
+  background:none;
+  z-index: 2;
+}
+#about img{
+  width: 90vw;
+  position: relative;
+  right: 50px;
+}
+#backgroundvideo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  z-index: 1;
+}
+article{
+  max-width: 600px;
+  position: relative;
+  left: 50vw;
+  top: -10vh;
+  z-index: 10;
+}
+#contact{
+  background-image: url(../imgs/darren-coleshill-254108-unsplash.jpg);
+  background-size: cover;
+  text-align: center;
+  z-index:2;
+}
+#email-link{
+  width: 600px;
+}
+#contact p{
+  text-align: left;
+  line-height: 30px;
+  margin: 10px;
+}
+aside{
+  margin: 10px auto;
+  width: 350px;
+}
+aside img{
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  opacity: .8;
+  float: left;
+}
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#works{
+  height: 100vh;
+  z-index: 2;
+  text-align: center;
+}
+#works a{
+  display: inline-block;
+  position: relative;
+  margin: 30px;
+  font-size: 45px;
+  font-weight: 400;
+  transition: all .6s;
+  width: 300px;
+  height: 50px;
+
+}
+#works img{
+  position: absolute;
+  width: 600px;
+  left:-150px;
+  top: -275px;
+  opacity: 0.2;
+  z-index: -10;
+}
+#project1-img,#project2-img,#project3-img{
+  display:none;
+}
+button{
+  width: 180px;
+  height: 40px;
+  background: none;
+  border: solid white 3px;
+  border-radius: 20px;
+  color: #719549;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  transition: all .5s ease;
+  text-align:center;
+}
+button:hover{
+  background-color: white;
+}
+form button{
+  background: none;
+  border: solid #719549 3px;
+  color: #719549;
+  margin-top: 10px;
+}
+form button:hover{
+  background-color: #719549;
+  color:white;
+}
+form{
+  background-color: white;
+  /* position: absolute; */
+  display: none;
+  position: absolute; /* Stay in place */
+  z-index: 4; /* Sit on top */
+  left: 20%;
+  top: 20%;* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  text-align:center;
+  padding: 50px;
+}
+label{
+  display: block;
+  text-align:left;
+  margin: 8px 0 5px 0;
+}
+input{
+  background-color: #dddddd;
+  width: 100%;
+  padding: 5px;
+}
+textarea{
+  background-color: #dddddd;
+  width: 100%;
+  padding: 5px;
+}
+
+/* -----------------------------------
+.............TYPOGRAPHY...............
+----------------------------------- */
+h1{
+  line-height: 100vh;
+  font-size: 70px;
+  font-weight: 700;
+  letter-spacing: .3em;
+}
+h2{
+  font-size: 45px;
+  font-weight: 400;
+  clear: both;
+  margin-bottom: 20px;
+}
+h3{
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  margin-bottom: 5px;
+}
+p{
+  font-family: "Open Sans", sans-serif;
+  line-height: 16px;
+  font-size: 14px;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+span {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+span::before, span::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #e39668;
+}
+
+span::before {
+  left: -2.5px;
+}
+span::after {
+  right: 2.5px;
+  background: #e39668;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span:hover::before {
+  background: #e39668;
+  width: 100%;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span:hover::after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+/* -----------------------------------
+...............FOOTER.................
+----------------------------------- */
+footer{
+  position: fixed;
+  z-index: 10;
+  bottom:0;
+  height: 60px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 20px;
+}
+footer img{
+  margin-top: 10px;
+  height: 30px;
+  position: relative;
+  opacity: .7;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+footer p{
+  text-align: right;
+  font-size: 9px;
+  margin-right:5px;
+}
+/* -----------------------------------
+................MISC..................
+----------------------------------- */
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#719549,#a9d86c);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #linear-gradient(#a9d86c,#719549);
+}

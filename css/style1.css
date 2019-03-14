@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #282828;
+}
+
+/* -----------------------------------
+...............HEADER.................
+----------------------------------- */
+body{
+  background-color: white;
+}
+header {
+  position: fixed;
+  padding: 1.5rem;
+  z-index: 20;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logobox{
+  background: linear-gradient(#719549,#a9d86c);
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  box-shadow: 3px 3px 10px #999999;
+}
+.logobox img{
+  width: 40px;
+  left: 4px;
+  top: 5px;
+  opacity: 1;
+  display: inline-block;
+  position: relative;
+}
+.nav-mobile{
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height: 100%;
+  background-color: #a9d86c;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+  text-align:center;
+}
+.nav-mobile li{
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 15% 0;
+}
+.nav-desktop{
+  display:none;
+  position: fixed;
+  right: 0;
+}
+.nav-desktop li{
+  display: inline-block;
+  margin-right: 2rem;
+  font-size: .8rem;
+  font-weight: 600;
+}
+.hamburger, .cross{
+  z-index: 40;
+  width: 10%;
+  position: fixed;
+  right: 0;
+  margin-right: 5%;
+}
+/* -----------------------------------
+...............LAYOUT.................
+----------------------------------- */
+section{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+}
+#landing{
+  background-image: url(../imgs/sarah-dorweiler-123483-unsplash.jpg);
+  text-align: center;
+}
+#about{
+  position: relative;
+  background-image: url(../imgs/sarah-dorweiler-357959-unsplash.jpg);
+}
+#about img{
+  width: 150%;
+  max-width: 850px;
+  position: relative;
+  right: 10%;
+  opacity: .8;
+}
+article{
+  max-width: 500px;
+  margin: 0 10%;
+  z-index: 10;
+}
+#contact{
+  background-image: url(../imgs/darren-coleshill-254108-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 0 5%;
+  z-index:2;
+}
+#email-link{
+  width: 100%;
+  max-width: 600px;
+}
+#contact p{
+  text-align: left;
+  line-height: 30px;
+  margin: 3%;
+}
+aside{
+  margin: 5% auto;
+  width: 100%;
+  max-width: 350px;
+}
+aside img{
+  width: 30px;
+  height: 30px;
+  margin-right: 5%;
+  opacity: .8;
+  float: left;
+}
+.flex-container{
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#works{
+  z-index: 2;
+  text-align: center;
+}
+#works a{
+  display: inline-block;
+  position: relative;
+  font-size: 45px;
+  font-weight: 400;
+  transition: all .6s;
+  width: 100%;
+  max-width: 300px;
+  height: 75%;
+
+}
+button{
+  width: 180px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: solid white 3px;
+  border-radius: 20px;
+  color: #719549;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  transition: all .5s ease;
+  text-align:center;
+}
+button:hover{
+  background-color: white;
+}
+figcaption{
+  font-size: .7rem;
+}
+
+/* -----------------------------------
+.............TYPOGRAPHY...............
+----------------------------------- */
+h1{
+  line-height: 100%;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: .3em;
+}
+h2{
+  font-size: 2rem;
+  font-weight: 400;
+  clear: both;
+  margin-bottom: 5%;
+}
+h3{
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+}
+p{
+  font-family: "Open Sans", sans-serif;
+  line-height: 1rem;
+  font-size: .9rem;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+span {
+  position: relative;
+  display: block;
+}
+
+span::before, span::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #e39668;
+}
+
+span::before {
+  left: -2.5px;
+}
+span::after {
+  right: 2.5px;
+  background: #e39668;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span:hover::before {
+  background: #e39668;
+  width: 100%;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span:hover::after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+/* -----------------------------------
+...............FOOTER.................
+----------------------------------- */
+footer{
+  position: fixed;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+  bottom:0;
+  height: 7%;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: .2%;
+}
+footer h4{
+  font-size: 1.6rem;
+  position: relative;
+  opacity: .7;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+footer p{
+  text-align: center;
+  font-size: .6rem;
+}
+/* -----------------------------------
+................MISC..................
+----------------------------------- */
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#719549,#a9d86c);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#a9d86c,#719549);
+}
+#project1-img,#project2-img,#project3-img{
+  display:none;
+}
+/* -----------------------------------
+...........MEDIA QUERIES..............
+----------------------------------- */
+@media (min-width: 500px) {
+  .nav-mobile{
+    display: none;
+  }
+  .hamburger, .cross{
+    display: none;
+  }
+  .nav-desktop{
+    display:inherit;
+  }
+}
+/* START 650 PX MEDIA QUERY */
+@media (min-width: 650px) {
+  #about img{
+    right: 10%;
+    width: 100%;
+  }
+  article{
+    margin: 0 auto;
+  }
+}
+/* START 850 PX MEDIA QUERY */
+@media (min-width: 850px) {
+  h1{
+    font-size: 4rem;
+  }
+  h2{
+    margin-bottom: 1%;
+  }
+  #about img{
+    left: 40%;
+  }
+  aside{
+    margin: 1% auto;
+  }
+}
