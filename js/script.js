@@ -1,3 +1,4 @@
+//FULLPAGE.JS PLUGIN: https://github.com/alvarotrigo/fullPage.js/
 var myFullpage = new fullpage('#fullpage', {
   //Navigation
   anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
@@ -56,32 +57,6 @@ var myFullpage = new fullpage('#fullpage', {
   }
 });
 
-// $(document).ready(function() {
-//   $("#project1").mouseover(function() {
-//     $("#project1-img").fadeIn(600);
-//   });
-//   $("#project1").mouseout(function() {
-//     $("#project1-img").fadeOut(600);
-//   });
-//   $("#project2").mouseover(function() {
-//     $("#project2-img").fadeIn(600);
-//   });
-//   $("#project2").mouseout(function() {
-//     $("#project2-img").fadeOut(600);
-//   });
-//   $("#project3").mouseover(function() {
-//     $("#project3-img").fadeIn(600);
-//   });
-//   $("#project3").mouseout(function() {
-//     $("#project3-img").fadeOut(600);
-//   });
-//   $("#msgbutton").click(function() {
-//     $("#contact-form").fadeIn(600);
-//   });
-//   $(".close").on("click", function() {
-//     $("#contact-form").fadeOut(600);
-//   });
-// });
 $( document ).ready(function() {
   $( ".cross" ).hide();
   $( ".nav-mobile" ).hide();
@@ -105,6 +80,8 @@ $( document ).ready(function() {
     });
   });
 });
+
+//PARTICLES.JS PLUGIN: https://vincentgarreau.com/particles.js/
 particlesJS('particles-js',
 {
   "particles": {
