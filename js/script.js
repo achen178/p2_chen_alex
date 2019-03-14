@@ -113,5 +113,10 @@ $( document ).ready(function() {
       $( ".hamburger" ).show();
     });
   });
-
+  $( ".nav-mobile a").click(function() {
+    $( ".nav-mobile" ).slideToggle( "slow", function() {
+      $( ".cross" ).hide();
+      $( ".hamburger" ).show();
+    });
+  });
 });
